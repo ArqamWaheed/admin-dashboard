@@ -40,7 +40,8 @@ body {
 .container {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: auto;
+  grid-template-rows: 220px;
+  min-height: 100vh;
 }
 
 
@@ -78,6 +79,13 @@ body {
   margin-left: 10px;
 }
 
+.dashboard h2 {
+  cursor: pointer;
+}
+
+
+
+
 
 
 .header {
@@ -102,6 +110,10 @@ body {
     margin-left: 25px;
 }
 
+.top h2 {
+  margin-right: 50px;
+}
+
 input {
   height: 45px;
   border: none;
@@ -109,7 +121,7 @@ input {
   background-color: #e5e5e5;
   width: 50%;
   margin-left: 20px;
-  margin-right: max(80px, 15%);
+  margin-right: auto;
 }
 
 .bottom {
@@ -143,7 +155,11 @@ input {
 
 
 
-.projects {
+
+
+
+.projects,
+.sidebar {
   background-color: #e2e8f0;
   padding: 30px;
 }
@@ -159,7 +175,7 @@ input {
   display: grid;
   grid-template-rows: 70% 30%;
   background-color: #FFFFFF;
-  height: 200px;
+  height: 250px;
   margin-top: 10px;
   border-radius: 15px;
   border-left: 12px solid #e4ac92;
@@ -176,6 +192,7 @@ input {
 .projcontainer > div img {
   width: 30px;
   margin-left: 20px;
+  cursor: pointer;
 }
 
 .flexitems {
@@ -183,7 +200,62 @@ input {
   justify-content: flex-end;
 }
 
-.sidebar {
-  background-color: #e2e8f0;
+
+
+
+
+
+.sidebar > div {
+  background-color: #FFFFFF;
+  height: 390px;
+  margin-top: 10px;
+  border-radius: 15px;
+  padding: 15px 30px;
 }
 
+.sidebarcontent {
+  margin: 10px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 100px;
+}
+
+.sidebarcontent p {
+  color: #676767;
+}
+
+.sidebarcontent h3 {
+  text-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.borderdiv {
+  border-top: 1px solid #676767;
+  margin-top: 5px;
+  padding-top: 5px;
+}
+
+.sidebar h2:nth-of-type(2) {
+  margin-top: 30px;
+}
+
+.sidebar h2:nth-of-type(2) + div {
+  height: 345px;
+}
+
+.sidebar img {
+  width: 60px;
+  border-radius: 50px;
+  margin-right: 20px;
+}
+
+.trending {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.trending span {
+  color: #676767;
+}
